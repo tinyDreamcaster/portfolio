@@ -1,0 +1,6 @@
+@import './mixins/mixinSection.scss';
+
+
+.mainSection {
+    @include mixinSection();
+}

@@ -1,0 +1,51 @@
+.introPanel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    max-width: 20rem;
+    min-height: 15rem;
+    backdrop-filter: blur(.5rem);
+    box-shadow: inset 0 0 0 187.5rem rgba(150, 150, 150, 0.192);
+
+    &__title {
+        font-family: "Nunito-Bold";
+        font-size: 2.2rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    // &__description {
+    //     margin-top: 0;
+    //     margin-bottom: 0;
+    //     text-align: justify;
+    //     &:last-of-type {
+    //         margin-bottom: 2rem;
+    //     }
+
+    // }
+
+    &__button {
+        background: none;
+        border: none;
+        text-align: center;
+        font-size: 1rem;
+        color: white;
+        backdrop-filter: brightness(2);
+        padding: 0.8rem 1.8rem;
+        border-radius: 2rem;
+        cursor: pointer;
+
+        &:hover {
+            backdrop-filter: brightness(1);
+        }
+    }
+}

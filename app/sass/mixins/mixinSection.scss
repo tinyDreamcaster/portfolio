@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+@mixin mixinSection() {
+    display: flex;
+    flex-direction: column;
+    min-height: 25rem;
+    max-width: 60rem;
+    justify-content: space-between;
+
+    margin-bottom: 15rem;
+
+    @media (max-width: $breakpointLg),
+    (max-height: $breakpointLgHeight) {
+        margin-bottom: 10rem;
+
+    }
+
+    @media (max-width: $breakpointSm) {
+        margin-bottom: 5rem;
+    }
+
+    & .sectionTitle {
+        align-self: center;
+        color: #fff;
+        font-size: 5rem;
+        text-align: left;
+        margin: 1.875rem 0;
+
+        @media (max-width: $breakpointLg),
+        (max-height: $breakpointLgHeight) {
+            font-size: 3rem;
+    
+        }
+
+        @media (max-width: $breakpointSm) {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: $breakpointLg),
+    (max-height: $breakpointLgHeight) {
+        max-width: 46rem;
+        min-height: 20rem;
+
+    }
+
+    @media (max-width: $breakpointMd) {
+        max-width: 39rem;
+    }
+
+    @media (max-width: $breakpointSm) {
+        max-width: 25rem;
+        min-height: 14rem;
+    }
+
+    @media (max-width: $breakpointXsm) {
+        max-width: 16rem;
+        min-height: 14rem;
+    }
+}

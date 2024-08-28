@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.subtitle {
+    padding: 1rem;
+    // max-width: 60rem;
+    width: 100%;
+    position: relative;
+    left: -1rem;
+
+    & p {
+        font-size: $fontSizeDefault;
+        @media (max-width: $breakpointLg),
+        (max-height: $breakpointLgHeight) {
+            font-size: $fontSizeLg;
+
+        }
+        @media (max-width: $breakpointSm) {
+            font-size: $fontSizeSm;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+@import './mixins/mixinSection.scss';
+
+
+.skillListSection {
+    @include mixinSection();
+}

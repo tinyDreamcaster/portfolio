@@ -1,0 +1,83 @@
+@import './variables.scss';
+
+@keyframes buttonFocus {
+
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+.navigation {
+    list-style: none;
+    display: flex;
+    margin-top: 2.125rem;
+    margin-bottom: 0;
+    padding: 0;
+    max-width: 35rem;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & li {
+        & a {
+            font-size: $fontSizeDefault;
+            text-decoration: none;
+            position: relative;
+            background: none;
+            border: none;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+
+            &:hover::before,
+            &:focus::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -0.0625rem;
+                width: 0;
+                height: .0625rem;
+                background-color: white;
+                animation-name: buttonFocus;
+                animation-duration: .3s;
+                // animation-timing-function: cubic-bezier(1, 0, 0, 0.5);
+                animation-fill-mode: forwards;
+
+            }
+
+            @media (max-width: $breakpointLg),
+            (max-height: $breakpointLgHeight) {
+                font-size: $fontSizeLg;
+
+            }
+
+            @media (max-width: $breakpointSm) {
+                font-size: $fontSizeDefault;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSm) {
+        flex-direction: column;
+        height: 15rem;
+        max-width: 25rem;
+        padding-left: 1rem;
+
+    }
+
+    @media (max-width: $breakpointSm) {
+        flex-direction: column;
+        height: 15rem;
+        /* max-width: 25rem; */
+        /* left: 1rem; */
+        position: fixed;
+        width: 50%;
+        left: 1rem;
+    }
+
+}

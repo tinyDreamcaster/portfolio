@@ -1,0 +1,114 @@
+// @mixin mixinTitleShow1($top, $left) {
+//     font-size: 9rem;
+//     opacity: 0;
+//     text-shadow: 0 0 .625rem #ffffff;
+//     top: $top;
+//     left: $left;
+//     width: 10rem;
+// }
+
+// opacity: 1;
+// text-shadow: 0 0 0 #ffffff;
+
+@mixin mixinTitleShow($top, $left, $font, $width, $opacity, $textShadow, ) {
+    font-size: $font;
+    opacity: $opacity;
+    text-shadow: $textShadow;
+    top: $top;
+    left: $left;
+    width: $width;
+}
+
+@mixin mixinTitle($animationName,
+    $letterFont0,
+    $letterWidth0,
+    $letterTop_0,
+    $letterLeft_0,
+    $letterLeft_0_prog,
+    $letterTop1_90 ,
+    $letterTop2_90 ,
+    $letterLeft_90 ,
+    $letterFont90,
+    $letterWidth90,
+    $letterFont100,
+    $letterWidth100,
+    $letterLeft_100,
+    $letterTop1_100,
+    $letterTop2_100 ) {
+
+    @for $i from 1 through 7 {
+
+        @keyframes #{$animationName}#{$i} {
+
+            0% {
+
+                $shiftTop: map-get((1 : $letterTop_0,
+                            2 : $letterTop_0,
+                            3 : $letterTop_0,
+                            4 : $letterTop_0,
+                            5 : $letterTop_0,
+                            6 : $letterTop_0,
+                            7 : $letterTop_0,
+                        ),
+                        $i);
+                $shiftLeft: map-get((1 : $letterLeft_0,
+                            2 : $letterLeft_0 + $letterLeft_0_prog * ($i - 1),
+                            3 : $letterLeft_0 + $letterLeft_0_prog * ($i - 1),
+                            4 : $letterLeft_0 + $letterLeft_0_prog * ($i - 1),
+                            5 : $letterLeft_0 + $letterLeft_0_prog * ($i - 1),
+                            6 : $letterLeft_0 + $letterLeft_0_prog * ($i - 1),
+                            7 : $letterLeft_0 + $letterLeft_0_prog * ($i - 1),
+                        ),
+                        $i);
+                @include mixinTitleShow($shiftTop, $shiftLeft, $letterFont0, $letterWidth0, 0, 0 0 .625rem #ffffff);
+            }
+
+            90% {
+                $shiftTop: map-get((1 : $letterTop1_90,
+                            2 : $letterTop2_90,
+                            3 : $letterTop1_90,
+                            4 : $letterTop2_90,
+                            5 : $letterTop1_90,
+                            6 : $letterTop2_90,
+                            7 : $letterTop1_90,
+                        ),
+                        $i);
+                $shiftLeft: map-get((1 : $letterLeft_90 * ($i - 1),
+                            2 : $letterLeft_90 * ($i - 1),
+                            3 : $letterLeft_90 * ($i - 1),
+                            4 : $letterLeft_90 * ($i - 1),
+                            5 : $letterLeft_90 * ($i - 1),
+                            6 : $letterLeft_90 * ($i - 1),
+                            7 : $letterLeft_90 * ($i - 1),
+                        ),
+                        $i);
+                @include mixinTitleShow($shiftTop, $shiftLeft, $letterFont90, $letterWidth90, 1, 0 0 0 #ffffff);
+            }
+
+            100% {
+
+                $shiftLeft: map-get((1 : $letterLeft_100 * ($i - 1),
+                            2 : $letterLeft_100 * ($i - 1),
+                            3 : $letterLeft_100 * ($i - 1),
+                            4 : $letterLeft_100 * ($i - 1),
+                            5 : $letterLeft_100 * ($i - 1),
+                            6 : $letterLeft_100 * ($i - 1),
+                            7 : $letterLeft_100 * ($i - 1),
+                        ),
+                        $i);
+
+                $shiftTop: map-get((1 : $letterTop1_100,
+                            2 : $letterTop2_100,
+                            3 : $letterTop1_100,
+                            4 : $letterTop2_100,
+                            5 : $letterTop1_100,
+                            6 : $letterTop2_100,
+                            7 : $letterTop1_100,
+                        ),
+                        $i);
+                @include mixinTitleShow($shiftTop, $shiftLeft, $letterFont100, $letterWidth100, 1, 0 0 0 #ffffff);
+
+            }
+        }
+    }
+}

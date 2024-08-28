@@ -1,0 +1,17 @@
+@mixin fontFaceConfig($fontFamily, $fontWeight, $fontStyle) {
+
+  font-family: $fontFamily;
+  src: url("../../public/font/#{$fontFamily}.woff2") format("woff2"),
+    url("../../public/font/#{$fontFamily}.woff") format("woff");
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+}
+
+@font-face {
+  @include fontFaceConfig("Nunito-Bold", 700, normal);
+
+}
+
+@font-face {
+  @include fontFaceConfig("Nunito-Regular", 400, normal);
+}

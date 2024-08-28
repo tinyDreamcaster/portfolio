@@ -1,0 +1,21 @@
+@import './sass/decorativeWrapper.scss';
+@import './sass/decorativePanel.scss';
+@import './sass/introPanelWrapper.scss';
+@import './sass/glasspanel.scss';
+@import './sass/introPanel.scss';
+@import './sass/container.scss';
+@import './sass/navigationWrapper.scss';
+@import './sass/navigation.scss';
+@import './sass/mainSection.scss';
+@import './sass/title.scss';
+@import './sass/subtitle.scss';
+@import './sass/skillListSection.scss';
+@import './sass/skillList.scss';
+@import './sass/worksSection.scss';
+@import './sass/workList.scss';
+@import './sass/contactsSection.scss';
+@import './sass/contactList.scss';
+
+@media (max-width: $breakpointSm) {
+    @import './sass/burgerMenu.scss';
+}

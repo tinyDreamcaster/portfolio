@@ -1,0 +1,6 @@
+@mixin mixinGlasspanel() {
+    position: relative;
+    background: inherit;
+    overflow: hidden;
+    border-radius: .625rem;
+}

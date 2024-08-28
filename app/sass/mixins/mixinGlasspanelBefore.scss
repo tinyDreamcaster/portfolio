@@ -1,0 +1,13 @@
+@mixin mixinGlasspanelBefore() {
+    position: absolute;
+    content: '';
+    background: inherit;
+    height: 100vh;
+    width: 100vw;
+    left: -5vw;
+    right: 0;
+    top: -5vh;
+    bottom: 0;
+    box-shadow: inset 0 0 0 187.5rem rgba(150, 150, 150, 0.192);
+    filter: blur(.3125rem);
+}

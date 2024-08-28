@@ -1,0 +1,178 @@
+@import './mixins/mixinTitleAnimation.scss';
+
+// размер шрифта в начале анимации, 
+// ширина поля в начале анимации,
+// отступ сверху в начале анимации,
+// отступ слева в начале анимации,
+// арифметическая прогрессия отступа слева в начале анимации,
+// отступ сверху в конце анимации,
+// отступ слева с прогрессией в конце анимации,
+// размер шрифта в конце анимации,
+// ширина поля в конце анимации,
+// окончательный размер шрифта,
+// окончательная ширина поля,
+// окончательный отступ слева с прогрессией
+
+@include mixinTitle(titleShow,
+    9rem,
+    10rem,
+    -10rem,
+    -9rem,
+    11rem,
+    1rem,
+    1rem,
+    9rem,
+    4rem,
+    5rem,
+    5rem,
+    6rem,
+    9rem,
+    0,
+    0);
+
+@include mixinTitle(titleShowLg,
+    7rem,
+    8rem,
+    -8rem,
+    -7rem,
+    8rem,
+    1rem,
+    1rem,
+    7rem,
+    2rem,
+    3rem,
+    3rem,
+    4rem,
+    7rem,
+    0,
+    0);
+
+@include mixinTitle(titleShowMd,
+    5rem,
+    5rem,
+    -7rem,
+    -6rem,
+    7rem,
+    1rem,
+    1rem,
+    6rem,
+    1rem,
+    2rem,
+    2rem,
+    3rem,
+    6rem,
+    0,
+    0);
+
+
+@include mixinTitle(titleShowSm,
+    3rem,
+    3rem,
+    -5rem,
+    -4rem,
+    4.5rem,
+    .7rem,
+    .7rem,
+    4rem,
+    .5rem,
+    .7rem,
+    .9rem,
+    1rem,
+    4rem,
+    0,
+    0);
+
+@include mixinTitle(titleShowXsm,
+    3rem,
+    3rem,
+    -5rem,
+    -1rem,
+    2rem,
+    -3rem,
+    .7rem,
+    2.5rem,
+    .5rem,
+    .7rem,
+    .9rem,
+    1rem,
+    2.5rem,
+    -3.5rem,
+    0);
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: -1rem;
+    width: 100%;
+    min-width: 60rem;
+
+    & .title__letter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 5rem;
+        width: 6rem;
+        text-align: center;
+        padding: 1rem;
+        opacity: 0;
+        color: transparent;
+
+
+
+        @for $i from 1 through 7 {
+            &:nth-child(#{$i}) {
+                animation-name: titleShow#{$i};
+                animation-timing-function: ease-out;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+
+                $delaySeconds: map-get((1 : 2,
+                            2 : 2.2,
+                            3 : 2.4,
+                            4 : 2.6,
+                            5 : 2.8,
+                            6 : 3,
+                            7 : 3.2,
+                        ),
+                        $i);
+                animation-delay: #{$delaySeconds}s;
+
+                @media (max-width: $breakpointLg),
+                (max-height: $breakpointLgHeight) {
+                    animation-name: titleShowLg#{$i};
+
+                }
+
+                @media (max-width: $breakpointMd) {
+                    animation-name: titleShowMd#{$i};
+                }
+
+                @media (max-width: $breakpointSm) {
+                    animation-name: titleShowSm#{$i};
+                }
+
+                @media (max-width: $breakpointXsm) {
+                    animation-name: titleShowXsm#{$i};
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: $breakpointLg),
+    (max-height: $breakpointLgHeight) {
+        min-width: 46rem;
+
+    }
+
+    @media (max-width: $breakpointMd) {
+        min-width: 39rem;
+    }
+
+    @media (max-width: $breakpointMd) {
+        min-width: 25rem;
+    }
+
+}

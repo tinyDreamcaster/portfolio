@@ -1,0 +1,30 @@
+
+@mixin mixinBurger(){
+    width: 2rem;
+    height: 0.2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.burgerMenu {
+
+    margin-top: 5rem;
+    @include mixinBurger();
+    position: relative;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        @include mixinBurger();
+        top: -0.5rem;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        @include mixinBurger();
+        bottom: -0.5rem;
+    }
+
+}
