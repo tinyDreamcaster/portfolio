@@ -25,7 +25,7 @@ export default function Home() {
   const containerRef = useRef(null);
   const burgerNavigationRef = useRef(null);
   const burgerCloseRef = useRef(null);
-
+  const bottomPadRef = useRef(null);
 
 
   useEffect(() => {
@@ -84,7 +84,8 @@ export default function Home() {
             OpenPortfolio(
               decorativeWrapperRef,
               introPanelWrapperRef,
-              containerRef
+              containerRef,
+              bottomPadRef
             );
             setTimeout(() => {
 
@@ -144,7 +145,7 @@ export default function Home() {
           <Contacts />
         </main>
       </div>
-      <div className='bottomPad'></div>
+      <div ref={bottomPadRef} className='bottomPad'></div>
     </>
   );
 }
