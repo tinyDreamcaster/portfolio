@@ -14,20 +14,20 @@ export default function Contacts() {
             <ul data-aos="fade-up" className={styles.contactList}>
                 <li className={styles.contactList__contact}>
                     <p >
-                        <a href="https://vk.com/tinydreamcaster">VK:
+                        <a target="_blank" href="https://vk.com/tinydreamcaster">VK:
                             vk.com/tinydreamcaster</a>
                     </p>
                 </li>
                 <li className={styles.contactList__contact}>
                     <p >
-                        <a href="https://t.me/Tinydreamcaster">Telegram:
+                        <a target="_blank" href="https://t.me/Tinydreamcaster">Telegram:
                             @Tinydreamcaster</a>
 
                     </p>
                 </li>
                 <li className={styles.contactList__contact}>
                     <p >
-                        <a href="mailto:m_andrew95@mail.ru">Mail: m_andrew95@mail.ru</a>
+                        <a target="_blank" href="mailto:m_andrew95@mail.ru">Mail: m_andrew95@mail.ru</a>
                     </p>
                 </li>
 
