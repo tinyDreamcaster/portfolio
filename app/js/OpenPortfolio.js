@@ -3,7 +3,7 @@ export default function OpenPortfolio(decorativeWrapperRef, introPanelWrapperRef
     let decorativeWrapper = decorativeWrapperRef.current;
     let introPanelWrapper = introPanelWrapperRef.current;
     let container = containerRef.current;
-    let bottomPad = bottomPadRef;
+    let bottomPad = bottomPadRef.current;
 
     introPanelWrapper.style.display = 'none';
     decorativeWrapper.style.display = 'inherit';

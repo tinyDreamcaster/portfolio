@@ -14,34 +14,15 @@ export default function SkillList() {
             <ul className={styles.skillList}>
                 <li data-aos="fade-right" className={styles.glasspanel}>
                     <div className={styles.skillList__skillImage} />
-                    <p className={styles.skillList__skillDescription}>Базовые языки необходимые для верстки: HTML5, CSS3, Javascript</p>
+                    <p className={styles.skillList__skillDescription}>Библиотека React, Next js</p>
                 </li>
                 <li data-aos="fade-right" className={styles.glasspanel}>
                     <div className={styles.skillList__skillImage} />
                     <p className={styles.skillList__skillDescription}>Препроцессоры Sass, Less, Pug</p>
-
                 </li>
                 <li data-aos="fade-right" className={styles.glasspanel}>
                     <div className={styles.skillList__skillImage} />
                     <p className={styles.skillList__skillDescription}>Верстка макетов из Figma и Photoshop</p>
-                </li>
-                <li data-aos="fade-right" className={styles.glasspanel}>
-                    <div className={styles.skillList__skillImage} />
-                    <p className={styles.skillList__skillDescription}>Отзывчивая, резиновая, адаптивная верстка</p>
-
-                </li>
-                <li data-aos="fade-right" className={styles.glasspanel}>
-                    <div className={styles.skillList__skillImage} />
-                    <p className={styles.skillList__skillDescription}>Кроссбраузерность</p>
-                </li>
-                <li data-aos="fade-right" className={styles.glasspanel}>
-                    <div className={styles.skillList__skillImage} />
-                    <p className={styles.skillList__skillDescription}>Desktop/mobile first</p>
-
-                </li>
-                <li data-aos="fade-right" className={styles.glasspanel}>
-                    <div className={styles.skillList__skillImage} />
-                    <p className={styles.skillList__skillDescription}>Pixel perfect</p>
                 </li>
                 <li data-aos="fade-right" className={styles.glasspanel}>
                     <div className={styles.skillList__skillImage} />
@@ -50,12 +31,23 @@ export default function SkillList() {
                 </li>
                 <li data-aos="fade-right" className={styles.glasspanel}>
                     <div className={styles.skillList__skillImage} />
-                    <p className={styles.skillList__skillDescription}>Библиотека React, Next js</p>
+                    <p className={styles.skillList__skillDescription}>Отзывчивая, резиновая, адаптивная верстка</p>
+                </li>
+                <li data-aos="fade-right" className={styles.glasspanel}>
+                    <div className={styles.skillList__skillImage} />
+                    <p className={styles.skillList__skillDescription}>Кроссбраузерность</p>
+                </li>
+                <li data-aos="fade-right" className={styles.glasspanel}>
+                    <div className={styles.skillList__skillImage} />
+                    <p className={styles.skillList__skillDescription}>Desktop/mobile first</p>
+                </li>
+                <li data-aos="fade-right" className={styles.glasspanel}>
+                    <div className={styles.skillList__skillImage} />
+                    <p className={styles.skillList__skillDescription}>Pixel perfect</p>
                 </li>
                 <li data-aos="fade-right" className={styles.glasspanel}>
                     <div className={styles.skillList__skillImage} />
                     <p className={styles.skillList__skillDescription}>Навыки использования npm</p>
-
                 </li>
             </ul>
         </section>
