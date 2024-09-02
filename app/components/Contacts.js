@@ -14,8 +14,8 @@ export default function Contacts() {
             <ul data-aos="fade-up" className={styles.contactList}>
                 <li className={styles.contactList__contact}>
                     <p >
-                        <a target="_blank" href="https://vk.com/tinydreamcaster">VK:
-                            vk.com/tinydreamcaster</a>
+                        <a target="_blank" href="https://github.com/tinyDreamcaster">Github:
+                        github.com/tinyDreamcaster</a>
                     </p>
                 </li>
                 <li className={styles.contactList__contact}>

@@ -22,11 +22,11 @@ export default function Works() {
                         <p >Прототип портфолио</p>
                     </a>
                 </li>
-                <li data-aos="zoom-out" className={styles.workList__work}>
+                {/* <li data-aos="zoom-out" className={styles.workList__work}>
                     <a target="_blank" href="https://tinydreamcaster.github.io/PCBuildCourse/">
                         <p >Прототип сайта Курсов по ПК сборке</p>
                     </a>
-                </li>
+                </li> */}
 
             </ul>
         </section>
